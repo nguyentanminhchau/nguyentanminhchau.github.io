@@ -45,7 +45,7 @@ li:before{
 .comment-user{
   background-image: url("../image/comment_bt.gif");
   background-repeat: no-repeat;
-  margin-left: 25px;
+  margin-left: 20px;
   padding-left: 40px;
   padding-bottom: 2px;
   font-size: 12px;
@@ -53,7 +53,7 @@ li:before{
 .comments{
   background-color: #ECECEC;
   font-size: 15px;
-  margin-left: 3px;
+  padding-left: 20px;
 }
 ul{
   list-style-type: none;
