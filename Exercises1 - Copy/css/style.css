@@ -35,7 +35,7 @@ body{
   margin-top: 8px;
 }
 li:before{
-  content: url("image/star.gif")
+  content: url("../image/star.gif")
 }
 .comment-title{
   text-align: center;
