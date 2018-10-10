@@ -34,6 +34,9 @@ body{
   display: block;
   margin-top: 8px;
 }
+li:before{
+  content: url("image/star.gif")
+}
 .comment-title{
   text-align: center;
   margin-top: 25px;
