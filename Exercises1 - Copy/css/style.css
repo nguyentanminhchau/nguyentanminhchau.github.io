@@ -14,6 +14,7 @@ div.profile-info{
   background: url("../image/title_bg.gif") repeat-x bottom;
   margin-left: 2px;
   margin-top: 0px;
+  margin-bottom: 5px;
 }
 .profile{
   float: left;
@@ -30,12 +31,13 @@ body{
   font-size: 16px;
   font-weight: normal;
   margin: 0px auto;
-  font-family: Geogria, Times New Roman, Times, Serif;
+  font-family: 'Times New Roman', Times, serif;
   display: block;
   margin-top: 8px;
 }
 li:before{
-  content: url("../image/star.gif")
+  content: url("../image/star.png");
+  padding-right: 6px;
 }
 .comment-title{
   text-align: center;
@@ -63,12 +65,13 @@ ul{
   padding-left: 5px;
   width: 113px;
 }
-#textarea{
+textarea{
   width: 363px;
   height: 90px;
   font-family: Geogria, Times New Roman, Times, serif;
   resize: none;
   font-size: 15px; 
+  text-align: inherit;
 }
 a{
   color: #0033FF;
