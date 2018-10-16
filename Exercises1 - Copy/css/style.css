@@ -37,7 +37,7 @@ body{
 }
 li:before{
   content: url("../image/star.png");
-  padding-right: 6px;
+  padding-right: 4px;
 }
 .comment-title{
   text-align: center;
