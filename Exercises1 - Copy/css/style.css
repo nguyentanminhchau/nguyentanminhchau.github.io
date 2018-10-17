@@ -1,10 +1,12 @@
 .profile-avatar{
   float: left;
+  
 }
 div.profile-info{
   width: 398px;
-  height: 110px;
+  height: 100px;
   overflow: scroll;
+
 }
 .title{
   font-weight: bold;
@@ -13,14 +15,15 @@ div.profile-info{
 .profile .profile-title{
   background: url("../image/title_bg.gif") repeat-x bottom;
   margin-left: 2px;
-  margin-top: 0px;
-  margin-bottom: 5px;
+  margin-top: 2px;
+  height: 25px;
+  margin-bottom: 0px;
 }
 .profile{
   float: left;
-  height: 120px;
+  height: 125px;
   width: 100%;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 .fact-title{
   margin-left: 3px;
@@ -28,16 +31,16 @@ div.profile-info{
 body{
   width: 500px;
   border: 1px solid #0033FF;
-  font-size: 16px;
-  font-weight: normal;
+  font-size: 15px;
   margin: 0px auto;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   display: block;
-  margin-top: 8px;
+  margin-top: 2px;
 }
 li:before{
   content: url("../image/star.png");
   padding-right: 4px;
+ 
 }
 .comment-title{
   text-align: center;
@@ -59,7 +62,8 @@ li:before{
 }
 ul{
   list-style-type: none;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  line-height: 25px;
 }
 .input-label {
   padding-left: 5px;
