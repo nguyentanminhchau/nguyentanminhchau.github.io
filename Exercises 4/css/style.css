@@ -1,0 +1,156 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    width: 362px;
+    margin: 0 auto;
+    background: black;
+}
+.bg{
+    background: #E6F3FB;
+    width: 318px;
+    
+}
+.container{
+    width: 295px;
+    margin: 0 auto;
+}
+.fist-block{
+    width: 305px;
+    height: 200px;
+}
+.title{
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+    width: 296px;
+    border-bottom: 2px solid;
+    border-color: #ffa500;
+}
+
+.fist-block__top{
+    width: 296px;
+    height: 87px;
+    padding-top: 6px;  
+    background: #FFFFFF;
+}
+.fist-block__label-link,.label-link{
+    font-weight: bold;
+    color: #0A6395;
+}
+a{
+    color: #0A6395;
+    text-decoration: none;
+    
+}
+.fist-block ul{
+    list-style-type: none;
+    padding-left: 8px;
+    margin-top: 0px;
+}
+.fist-block li{
+    border-bottom: 1px solid;
+    border-color: white;
+    padding: 10px 0px 12px 0px;
+}
+p{
+    line-height: 15px;
+}
+.fist-block__top p{
+    margin-top: 0px;
+}
+#special-content{
+    font-style: italic;
+    margin-bottom: 2px;
+}
+.clear{
+    clear: both;
+}
+.fist-block__top__content{
+    float: left;
+    width: 98px;
+    margin-left: 8px;
+}
+.fist-block__top-image{
+    float: left;
+    padding-left: 6px;
+}
+.fist-block__bottom{
+    background: #F9F1C2;
+    width: 296px;
+}
+.second-block_top{
+    height: 158px;
+}
+.second-block__top__content{
+    height: 150px;
+    width: 180px;
+    float: left;
+    margin-left: 20px;
+}
+.second-block__top__content p{
+    margin-bottom: 0px;
+}
+#calendar{
+    margin-top: 0px;
+}
+.second-block__top__image{
+    margin-top: 20px;
+    float: left;
+}
+.second-block__bottom{
+    background-image: url('../image/horoscopes-bottom.png');
+    background-repeat: no-repeat;
+    height: 67px;
+    margin-top: 15px;
+}
+.second-block__bottom p{
+    margin-bottom: 0;
+    padding-top: 12px;
+}
+.second-block__top__content__title{
+    font-weight: bolder;
+    font-size: 12px;
+}
+#calendar{
+    color: #808080;
+    font-size: 11px;
+   
+}
+.second-block__top__content p{
+    background: #f4f4ec;
+}
+.third-block{
+    height: 120px;
+    background: white;
+}
+.third-block__content{
+    width: 126px;
+    margin-left: 20px;
+    float: left;
+}
+.third-block__image{
+    float: right;
+}
+.four-block{
+    height: 84px;
+   
+}
+.four-block__title{
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+    width: 296px;
+    border-top: 1px solid;
+    border-top-color: #cccccc;
+    margin-top: 8px;
+    padding-top: 5px;
+}
+.four-block ul{
+    list-style-type: none;
+    border: 1px solid;
+    border-color: #dadada;
+    margin-top: 0px;   
+    line-height: 14px;
+    padding: 10px 0px 5px 6px;
+}
+}
