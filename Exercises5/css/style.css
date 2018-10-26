@@ -1,0 +1,85 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video , button{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+    display: block;
+    margin: 0 auto;
+}
+.product_1,.product_3,.product2_1,.product2_3,.product2_5,.product2_7{
+    float: left;
+    margin-left: 129px;
+}
+.product_2,.product_4,.product2_2,.product2_4,.product2_6,.product2_8{
+    float:left;
+
+}
+.clear{
+    clear: both;   
+}
+.btn-on-off-product-1,.btn-on-off-product2_1,.btn-on-off-product2_3,.btn-on-off-product2_5,.btn-on-off-product2_7{
+	margin-left: 100px;
+    margin-top: -75px;
+    position: absolute;
+}
+
+.btn-on-off-product-2,.btn-on-off-product2_2,.btn-on-off-product2_4,.btn-on-off-product2_6,.btn-on-off-product2_8{
+	margin-left: 27px;
+    margin-top: -75px;
+	position: absolute;
+}
+.btn-on-off-product-3{
+	margin-left: 100px;
+    margin-top: -90px;
+    position: absolute;
+}
+.btn-on-off-product-4{
+	margin-left: 27px;
+    margin-top: -90px;
+    position: absolute;
+}
+#bttop{
+	margin-left: 129px;
+    background: white;
+}
+
+
