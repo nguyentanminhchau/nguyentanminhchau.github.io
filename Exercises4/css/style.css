@@ -1,5 +1,6 @@
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: serif;
     font-size: 11px;
     width: 362px;
     margin: 0 auto;
@@ -44,13 +45,13 @@ a{
 }
 .fist-block ul{
     list-style-type: none;
-    padding-left: 8px;
+    padding-left: 0;
     margin-top: 0px;
 }
 .fist-block li{
     border-bottom: 1px solid;
     border-color: white;
-    padding: 10px 0px 12px 0px;
+    padding: 10px 0px 12px 8px;
 }
 p{
     line-height: 15px;
@@ -78,9 +79,11 @@ p{
     background: #F9F1C2;
     width: 296px;
 }
-.second-block_top{
+.second-block__top{
+    background: #fff;
     height: 158px;
 }
+
 .second-block__top__content{
     height: 150px;
     width: 180px;
@@ -96,15 +99,17 @@ p{
 .second-block__top__image{
     margin-top: 20px;
     float: left;
+    margin-left: 4px;
 }
 .second-block__bottom{
     background-image: url('../image/horoscopes-bottom.png');
     background-repeat: no-repeat;
     height: 67px;
-    margin-top: 15px;
+    margin-top: 0px;
 }
 .second-block__bottom p{
     margin-bottom: 0;
+    margin-top: 0;
     padding-top: 12px;
 }
 .second-block__top__content__title{
@@ -116,9 +121,7 @@ p{
     font-size: 11px;
    
 }
-.second-block__top__content p{
-    background: #f4f4ec;
-}
+
 .third-block{
     height: 120px;
     background: white;
@@ -141,16 +144,17 @@ p{
     font-weight: bold;
     width: 296px;
     border-top: 1px solid;
-    border-top-color: #cccccc;
+    border-top-color: #595959;
     margin-top: 8px;
     padding-top: 5px;
 }
 .four-block ul{
     list-style-type: none;
     border: 1px solid;
-    border-color: #dadada;
+    border-color: #595959;
     margin-top: 0px;   
     line-height: 14px;
-    padding: 10px 0px 5px 6px;
+    padding: 10px 0px 5px 9px;
+    background: #fff;
 }
 }
