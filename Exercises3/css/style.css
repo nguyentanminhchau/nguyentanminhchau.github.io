@@ -1,83 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #121214;
+}
 .header-bg{
-    position: absolute;
-    left: 0px;
-    top: 0px;
     z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
-.header-menu__icon{
-    margin-top: 180px;
-    margin-left: 20px;
-}
-.header-menu__title{
-    margin-left: 36px;
+.header-menu{
+    margin-left: 69px;
+    margin-top: 195px;
 }
 .header-menu ul{
     list-style-type: none;
     text-align: center;
-    width: 705px;
+    color: #f1f1f1;
     display: flex;
     justify-content: space-between;
-    height: 300px;
+    width: 690px;
+    height: 40px;
+    font-size: 19px;
 }
-.header-menu ul li{
-    width: 136px;
-    height: 84px;
-    text-align: center;
+.header-menu li{
+    flex-basis: 130px;
 }
-
 .header-menu a{
     text-decoration: none;
     color: #fff;
-    font-size: 20px;
+    display: block;
 }
 .header-menu a:hover{
     color: red;
 }
-body{
-    background: #121214;
-    color: #595959;
-    
-}
 .container{
-    width: 100%;
+    margin-top: 130px;
+    width: 900px;
+    height: 602px;
+    color: #595959;
 }
-.container__block-right-half,.container__content-right-half,.container__right-half__lauchlink{
-        margin-left: 50px;
-}   
 .clear{
     clear: both;
 }
 .container__left-half{
-    width: 234px;
-    height: 350px;;
+    width: 235px;
+    height: 358px;
     background: #1F1F1F;
-    color: #595959;
-    margin-left: 58px;
+    margin-left: 53px;
     float: left;
-    margin-top: 55px;
-
-}
-.container__right-half{
-    float: left;
-    width: 400px;
-    margin-top: 70px;
 }
 .container__left-half__content{
-    margin-left: 24px;
-    width: 190px;
-    border-top: 1px solid;
-    border-bottom: 0.5px solid;
+    width: 186px;
+    height: 80px;
+    font-size: 13px;
     text-align: left;
-    box-sizing: border-box;
-    padding-top: 25px;
-    padding-bottom: 65px;
-    margin-top: 55px;
+    margin-top: 28px;
+    margin-left: 7px;
+   
 }
-.container ul{
+.container__left-half__list{
+    width: 194px;
+    height: 145px;
+    font-size: 13px;
     list-style-type: none;
     text-decoration: underline;
+    margin-top: 26px;
+    margin-left: 20px;
 }
-.container ul li::before{
+.inner{
+    margin: 0 auto;
+    width: 195px;
+    height: 350px;
+}
+.top{
+    width: 194px;
+    height: 146px;
+    border-top: 1px solid;
+   
+    margin-top: 43px;
+}
+.bottom{
+    width: 192px;
+    height: 148px;
+    border-top: 1px solid;
+}
+.container__left-half__list li::before{
     content: "";
     border-color: transparent #707070;
     border-style: solid;
@@ -85,44 +95,60 @@ body{
     display: block;
     height: 0;
     width: 0;
-    left: -1em;
-    top: 0.9em;
-    position: relative; 
+    left: -0.5em;
+    top: 0.8em;
+    position: relative;
+}
+.container__right-half{
+    width: 610px;
+    height: 500px;
+    float: right;
+    margin-top: 30px;
+}
+.container__right-half__top{
+    margin-bottom: 37px;
 }
 .container__pic-right-half{
+    width: 394px;
+    padding-right: 100px;
+}
+.container__right-half__content{
+    width: 394px;
     margin-left: 38px;
-    margin-bottom: 20px;
-    margin-top: 40px;
 }
-.container__right-half__lauchlink{
-    color: #fff;
-    text-decoration: none;
-    font-size: 11px;
-    
-    
+.container__block-right-half{
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
-.container__right-half__lauchlink::before{
-    content: url('../image/arr.png');
-    margin-right: 8px;
-
+.container__block-right-half,.container__content-right-half,.container__right-half__lauchlink{
+    margin-left: 14px;
 }
 .container__content-right-half{
     font-size: 11px;
-    width: 390px;
-    padding-bottom: 15px;
+    width: 370px;
+    height: 44px;
     border-bottom: 1px dotted;
+    margin-bottom: 14px;
 }
-.container__left-half__content,.container__left-half__list{
-    font-size: 12px;
+.container__right-half__lauchlink{
+    font-size: 11px;
+    text-decoration: none;
+    color: #fff;
+  
+}
+.container__right-half__lauchlink::before{
+    content: url('../image/arr.png');
+    margin-right: 5px;
 }
 .footer{
-    font-size: 11px;
+    width: 660px;
+    height: 60px;
+    color: #595959;
     border-top: 1px dotted;
-    margin-top: 40px;
+    margin-left: 53px;
+    margin-top: 70px;
 }
 .footer__content{
-    padding-bottom: 50px;
-    padding-top: 10px;
+    font-size: 10px;
+    margin-top: 22px;
 }
-
-
