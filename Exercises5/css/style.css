@@ -42,44 +42,59 @@ table {
 	border-spacing: 0;
 }
 img{
+	max-width: 100%;
     display: block;
     margin: 0 auto;
 }
-.product_1,.product_3,.product2_1,.product2_3,.product2_5,.product2_7{
-    float: left;
-    margin-left: 129px;
+a{
+	text-decoration: none;
 }
-.product_2,.product_4,.product2_2,.product2_4,.product2_6,.product2_8{
-    float:left;
+#header,.slide,.product{
+	
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+}
+.inner{
+	display: block;
+    max-width: 1093px;
+    width: 100%;
+    margin: 0 auto;
+}
+.product ul{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.product li{
+	position: relative;
+	width: 50%;
+}
+.item{
+	position: relative;
+}
 
-}
-.clear{
-    clear: both;   
-}
-.btn-on-off-product-1,.btn-on-off-product2_1,.btn-on-off-product2_3,.btn-on-off-product2_5,.btn-on-off-product2_7{
-	margin-left: 100px;
-    margin-top: -75px;
-    position: absolute;
-}
-
-.btn-on-off-product-2,.btn-on-off-product2_2,.btn-on-off-product2_4,.btn-on-off-product2_6,.btn-on-off-product2_8{
-	margin-left: 27px;
-    margin-top: -75px;
+.product li a{
+	background: url('../image/btn-on.jpg') no-repeat center center;
 	position: absolute;
+	display: block;
+	width: 76%;
+	z-index: 10;
+   height: 50px;
+	background-size: 100%;
+    left: 5%;
+    bottom: 7%;
 }
-.btn-on-off-product-3{
-	margin-left: 100px;
-    margin-top: -90px;
-    position: absolute;
+.product li:nth-child(2n+1) a{
+	left: 18.4%;
 }
-.btn-on-off-product-4{
-	margin-left: 27px;
-    margin-top: -90px;
-    position: absolute;
+.product li .btn-bottom{
+	bottom: 11%;
 }
-#bttop{
-	margin-left: 129px;
-    background: white;
+.product li .btn-bottom-2{
+	bottom: 8%;
 }
-
-
+.product li a:hover{
+	background: url('../image/btn-off.jpg') no-repeat center center;
+	background-size: 100%;
+}
