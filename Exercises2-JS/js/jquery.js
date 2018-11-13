@@ -4,7 +4,7 @@ $(document).ready(function () {
 	var oldPosition;
 	var heightWindow = $(window).height();
 	var current = heightWindow / 397;
-	var heightMenu = $(this).children().height() *(current +0.05);
+	var heightMenu = $(this).children().height() *current ;
 
 	$(".menu-list p	").hide();
 	$(".popup-1,.popup-2").hide();
