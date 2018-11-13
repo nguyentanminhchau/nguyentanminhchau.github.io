@@ -3,7 +3,6 @@ $(document).ready(function () {
 	var flag = 0;
 	var oldPosition;
 	var heightWindow = $(window).height();
-	alert(heightWindow);
 	var current = heightWindow /397;
 	var heightMenu = $(this).children().height() *(current+0.05);
 
