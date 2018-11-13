@@ -55,7 +55,6 @@ img{
     max-width: 300px;
     width: 100%;
     position: relative;
-    
     margin: 40px auto;
 
 }
@@ -69,16 +68,16 @@ img{
     padding: 10px 10px 15px 10px;
     border-radius: 15px;
     top: -160%;
-   margin: 0 auto;
+    margin: 0 auto;
 
 }
 .popup-1 p,.popup-2 p{
     text-align: left;
 }
 .popup-1 img,.popup-2 img{
-       display: block;
-       margin: 10px auto;
-        width: 90%;
+    display: block;
+    margin: 10px auto;
+    width: 90%;
 }
 li p{
     width: 100%;

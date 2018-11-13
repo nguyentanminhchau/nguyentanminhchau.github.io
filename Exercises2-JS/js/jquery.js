@@ -3,8 +3,8 @@ $(document).ready(function () {
 	var flag = 0;
 	var oldPosition;
 	var heightWindow = $(window).height();
-	var current = heightWindow /397;
-	var heightMenu = $(this).children().height() *(current+0.05);
+	var current = heightWindow / 397;
+	var heightMenu = $(this).children().height() *(current +0.05);
 
 	$(".menu-list p	").hide();
 	$(".popup-1,.popup-2").hide();
