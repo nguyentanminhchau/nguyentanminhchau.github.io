@@ -1,0 +1,104 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, ol,
+dl, dt, dd, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body { 
+  line-height: 1;
+  background: #f5f5f5;
+  color: #a37e23;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* CSS CONTAINER */
+.container {
+  position: relative;
+  background: url('../image/bg_itm_lineup.jpg') no-repeat;
+  background-position: center;
+  width: 950px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.slide {
+    
+  position: absolute;
+  padding-top: 100px;
+  width: 650px;
+  overflow: hidden;
+  height: 600px;
+  left: 15%;
+}
+
+.slide__list {
+  position: absolute;
+  display: flex;
+  margin: 0 auto;
+}
+
+.slide__prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+}
+
+.slide__next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+}
+
+.thumbnails {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  bottom: 0;
+  left: 15%;
+}
+
+.thumbnails li {
+  cursor: pointer;
+  margin-left: 20px;
+}
