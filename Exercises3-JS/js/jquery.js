@@ -15,10 +15,10 @@ var container = $(".js-list-item");
         imageCurrent++;
         if (imageCurrent > image.lenght - 1) {
             imageCurrent = 0;
-            image.animate({ left: "+="(slideWidth * image.lenght - slideWidth) }, speedSlide);
+            image.animate({ left: "+=" + (slideWidth * image.lenght - slideWidth) }, speedSlide);
         }
         else {
-            image.animate({ left: "-="(slideWidth) }, speedSlide);
+            image.animate({ left: "-=" + (slideWidth) }, speedSlide);
         };
     };
     /* Button previous */
@@ -26,10 +26,10 @@ var container = $(".js-list-item");
         imageCurrent--;
         if (imageCurrent < 0) {
             imageCurrent++;
-            image.animate({ left: "-="(slideWidth * image.lenght - slideWidth) }, speedSlide);
+            image.animate({ left: "-=" +(slideWidth * image.lenght - slideWidth) }, speedSlide);
         }
         else {
-            image.animate({ left: "+="(slideWidth) }, speedSlide);
+            image.animate({ left: "+=" + (slideWidth) }, speedSlide);
         }
     }
     /* Click navi image */
