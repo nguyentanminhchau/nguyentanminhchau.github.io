@@ -58,8 +58,8 @@ var container = $(".js-list-item");
         resetTimeout();
     }
     function publicClickMiniImage(index){
-        blurImageThumb();
         privateClickMiniImage(index);
+	blurImageThumb();
         resetTimeout();
     }
     return{
