@@ -18,7 +18,7 @@ var container = $(".js-list-item");
             image.animate({ left: "+=" + (slideWidth * image.lenght - slideWidth) }, speedSlide);
         }
         else {
-            image.animate({ left: "-=" + (slideWidth) }, speedSlide);
+            image.animate({ left: "-=" + slideWidth }, speedSlide);
         };
     };
     /* Button previous */
@@ -43,10 +43,7 @@ var container = $(".js-list-item");
        imageMini.eq(imageCurrent).css("opacity", "0.5");
 
     }
-    function resetTimeout() {
-		clearTimeout(timeOut);
-		timeOut = setTimeout(function() {publicNext();}, timeAutoSlide);
-	}
+  
     function publicNext(){
         privateNext();
         blurImageThumb();
@@ -61,6 +58,10 @@ var container = $(".js-list-item");
         privateClickMiniImage(index);
 	blurImageThumb();
         resetTimeout();
+    }
+    function resetTimeout() {
+	clearTimeout(timeOut);
+	timeOut = setTimeout(function() {publicNext();}, timeAutoSlide);
     }
     return{
         next : publicNext ,
