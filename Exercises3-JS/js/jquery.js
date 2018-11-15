@@ -3,7 +3,7 @@ var slide = (function () {
     var imageCurrent = 0;
     var timeAutoSlide = 2000;
     var speedSlide = 500;
-
+    var timeOut;	
 
 var image = $(".image");
 var imageMini = $(".imgMini");
