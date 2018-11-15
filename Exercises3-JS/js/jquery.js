@@ -25,7 +25,7 @@ var container = $(".js-list-item");
     function privatePrevious() {
         imageCurrent--;
         if (imageCurrent < 0) {
-            imageCurrent++;
+           imageCurrent = image.length - 1;
             image.animate({ left: "-=" +(slideWidth * image.lenght - slideWidth) }, speedSlide);
         }
         else {
