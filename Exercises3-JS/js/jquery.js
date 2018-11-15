@@ -63,9 +63,9 @@ var container = $(".js-list-item");
         resetTimeout();
     }
     return{
-        next = publicNext ,
-        previous = publicPrevious,
-        clikMiniImage= publicClickMiniImage
+        next : publicNext ,
+        previous : publicPrevious,
+        clikMiniImage : publicClickMiniImage
     };
 })();
 
