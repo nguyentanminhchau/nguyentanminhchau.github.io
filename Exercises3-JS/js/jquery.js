@@ -65,7 +65,7 @@ var container = $(".js-list-item");
     return{
         next : publicNext ,
         previous : publicPrevious,
-        clikMiniImage : publicClickMiniImage
+        clickMiniImage : publicClickMiniImage
     };
 })();
 
