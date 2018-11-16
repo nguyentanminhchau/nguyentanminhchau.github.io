@@ -14,12 +14,12 @@ var container = $("#js-list-item");
     /* Button next */
     function privateNext() {
         imageCurrent++;
-        if (imageCurrent > image.lenght -1) {
+        if (imageCurrent > image.length -1) {
             imageCurrent = 0;
-            container.animate({ left: "+=" + (slideWidth * image.lenght - slideWidth) }, speedSlide);
+            container.animate({ left: "+=" + (slideWidth * image.length - slideWidth) }, speedSlide);
         }
         else {
-            container.animate({ left: "+=" + slideWidth }, speedSlide);
+            container.animate({ left: "-=" + slideWidth }, speedSlide);
         };
     };
     /* Button previous */
@@ -27,7 +27,7 @@ var container = $("#js-list-item");
         imageCurrent--;
         if (imageCurrent < 0) {
            imageCurrent = image.length - 1;
-            container.animate({ left: "-=" +(slideWidth * image.lenght - slideWidth) }, speedSlide);
+            container.animate({ left: "-=" +(slideWidth * image.length - slideWidth) }, speedSlide);
         }
         else {
             container.animate({ left: "+=" + (slideWidth) }, speedSlide);
@@ -37,7 +37,7 @@ var container = $("#js-list-item");
     function privateClickMiniImage(index){
         console.log("index = " + index);
         container.animate({left: "+=" + (slideWidth*(imageCurrent - index))},speedSlide);
-        imageCurrent = index + 1;
+        imageCurrent = index;
     };
     function blurImageThumb(){
        imageMini.css("opacity", "1");
@@ -71,16 +71,17 @@ var container = $("#js-list-item");
     };
 });
 $(document).ready(function () {
-    slide.next();
+    var slider= new slide();
+    slider.next();
     $("#btn-prev").click(function(){
-        slide.previous();
+        slider.previous();
     });
     $("#btn-next").click(function () {
-        slide.next();
+        slider.next();
     });
     $(".imgMini").click(function(){
         console.log($(".imgMini").index(this));
-		slide.clickMiniImage($(".imgMini").index(this));
+		slider.clickMiniImage($(".imgMini").index(this));
     });
 });
 
