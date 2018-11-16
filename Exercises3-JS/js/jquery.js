@@ -44,18 +44,27 @@ var container = $("#js-list-item");
        imageMini.eq(imageCurrent).css("opacity", "0.5");
 
     }
+    function nonMultiClick (){
+        $(".container").css('pointer-events', 'none');
+		setTimeout(function () {
+            $(".container").css('pointer-events', 'auto');
+		}, 1000);
+    }
   
     function publicNext(){
+        nonMultiClick();
         privateNext();
         blurImageThumb();
         resetTimeout();
     }
     function publicPrevious(){
+        nonMultiClick();
         privatePrevious();
         blurImageThumb();
         resetTimeout();
     }
     function publicClickMiniImage(index){
+        nonMultiClick();
         privateClickMiniImage(index);
         blurImageThumb();
         resetTimeout();
