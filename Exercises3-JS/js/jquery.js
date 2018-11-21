@@ -78,19 +78,18 @@ var container = $("#js-list-item");
         previous : publicPrevious,
         clickMiniImage : publicClickMiniImage
     };
-});
+})();
 $(document).ready(function () {
-    var slider= new slide();
-    slider.next();
+    slide.next();
     $("#btn-prev").click(function(){
-        slider.previous();
+        slide.previous();
     });
     $("#btn-next").click(function () {
-        slider.next();
+        slide.next();
     });
     $(".imgMini").click(function(){
         console.log($(".imgMini").index(this));
-		slider.clickMiniImage($(".imgMini").index(this));
+		slide.clickMiniImage($(".imgMini").index(this));
     });
 });
 
