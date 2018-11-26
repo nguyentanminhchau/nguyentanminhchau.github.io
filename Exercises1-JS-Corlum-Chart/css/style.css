@@ -1,0 +1,49 @@
+body {
+	font-family: Arial, "Times New Roman";
+	margin: 120px auto;
+	width: 700px;
+	height:400px;
+	margin-left: 200px;
+	line-height: 1.5em;
+}
+canvas {
+	cursor: pointer;
+}
+header {
+	color: #333;
+	font-size: 25px;
+	text-align: center;
+}
+#content {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+#left {
+	margin:0;
+	width:50px;
+	height: 400px;
+	transform: rotate(-90deg);
+	position: absolute;
+}
+#left p{
+	width: 400px;
+	color: #999;
+	font-style: italic;
+	text-align: center;
+	position: relative;
+	top: 75px;
+	left: -160px;
+	font-size:30px;
+}
+#description {
+	margin-top:42px;
+	margin-left:20px;
+	width:40px;
+}
+footer {
+	color: #999;
+	font-size: 30px;
+	font-style: italic;
+	text-align: center;
+}

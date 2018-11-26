@@ -1,99 +1,96 @@
-var chart = function(){
-    var canvas = document.getElementById('bieuDoCot');
-    var ctx = canvas.getContext('2d');
 
-    function drawtitle(){
-        ctx.font = fonttitle;
-        ctx.fillText(title,100,ycenter - (maxcolum*50)-100);
-        ctx.fillStyle = titleColor;
-        ctx.fillStyle =  titleColor;
-		ctx.fillText(yourproject,250,ycenter +90);	
-		ctx.save();
-		ctx.translate(0, 500);
-   		ctx.rotate(- Math.PI/2);
-    	ctx.fillText(titleleft,25,25 );
-		ctx.restore();		
-
-    }
-    function drawchar(){
-		ctx.font = font;
-		for ( var i =0 ; i < maxcolum+1 ; i++){
-			//draw level
-			ctx.fillText(level[i],xcenter - 30,ycenter - (50 * i) +8);
-			
-			//draw column name
-			ctx.fillText(colum[i],xnamecolum + (100*i)  ,ynamecolum);
-			
-			//draw h line
-			if(i == 0){
-				ctx.save();
-				ctx.beginPath();
-				ctx.moveTo(xcenter, ycenter - (50 * i));
-				ctx.lineTo (xcenter + (100 * (maxcolum+1)) , ycenter - (50 * i));
-				ctx.stroke();
-				ctx.restore();
-			}else{
-				ctx.save();
-				ctx.beginPath();
-				ctx.strokeStyle = titleColor;
-				ctx.moveTo(xcenter, ycenter - (50 * i));
-				ctx.lineTo (xcenter + (100 * (maxcolum+1)), ycenter - (50 * i));
-				ctx.stroke();
-				ctx.restore();	
-			}
+var chart = (function() {
+	var canva = options.canvas;
+	canva.width = 600; 
+	canva.height = 400;
+	var ctx = canva.getContext("2d");
+	ctx.fillStyle = "#ff9800";
+	ctx.font = "20px Arial";
+	var data = options.data;
+	var dataDescription = options.dataDescription;
+	var descript = options.descript;
+	var valMax = options.valueMax;
+	var nameColumn = options.nameColumn;
+	var colors = options.color;
+	var columnRowSize = 50;// size of frame
+	var stepSizeY = 1; //The distance between the horizontal lines
+	var margin = 10;// Distance to write letters
+	var xScale = (canva.width - columnRowSize) / data.length; // Distance raito between vertical lines
+	var yScale = (canva.height - columnRowSize - margin) / valMax; //The distance raito between the horizontal lines
+	var flag = true;
+	//  check value input
+	for (var i in data) {
+		if (data[i] <= 0) {
+			flag = false;
 		}
 	}
-	function drawcolum(){
-		for ( var i =0 ; i < maxcolum+1 ; i++){
-			ctx.save();
-			ctx.beginPath();
-			ctx.strokeStyle = columcolor;
-			ctx.fillStyle = columcolor
-			ctx.moveTo(xcolum +(100*i) - 25, ycenter);
-			ctx.lineTo (xcolum +(100*i) -25, ycenter - (50 * columvalue[i]));
-			ctx.lineTo (xcolum +(100*i) +25, ycenter - (50 * columvalue[i]));
-			ctx.lineTo (xcolum +(100*i) +25, ycenter );
-			ctx.stroke();
-			ctx.fill();
-        }
-        }
-        
-        function drawnote(){
-            ctx.fillStyle =  titleColor;		
-            
-            ctx.fillStyle = colornote;
-            ctx.fillText(note[0],xcenter + (100 * (maxcolum+1)) + 50,ycenter - (50 * maxcolum)+50);
-            ctx.fillText(note[1],xcenter + (100 * (maxcolum+1)) + 50,ycenter - (50 * maxcolum)+75);
-            ctx.fillText(note[2],xcenter + (100 * (maxcolum+1)) + 50,ycenter - (50 * maxcolum)+100);		
-            ctx.save();
-            ctx.beginPath();
 
-            ctx.fillStyle = columcolor;
-            ctx.moveTo(xcenter + (100 * (maxcolum+1)) + 50, ycenter - (50 * maxcolum));
-            ctx.lineTo(xcenter + (100 * (maxcolum+1)) + 100,ycenter - (50 * maxcolum));
-            ctx.lineTo(xcenter + (100 * (maxcolum+1)) + 100,ycenter - (50 * maxcolum)+15);
-            ctx.lineTo(xcenter + (100 * (maxcolum+1)) + 50,ycenter - (50 * maxcolum)+15);
-            ctx.stroke();
-            ctx.fill();
-            ctx.restore();
-            ctx.rotate(-Math.PI /2);
-            ctx.fillText(titleleft,0,ycenter -100);
-        
-        }
-            return {
-                drawtitle:drawtitle,
-                drawchar:drawchar,
-                drawcolum:drawcolum,
-                drawnote:drawnote,
-                
-            }
-            
-            
-    }()
-    
-    chart.drawtitle();
-    chart.drawchar();
-    chart.drawcolum();
-    chart.drawnote();
-    
+	/**
+	 * Function draw Date plot chart
+	 */
+	 privateChartDataPlot = function() {
+	 	// tranlate and scale line because y scale with yScale
+		ctx.translate(columnRowSize, canva.height - (yScale * stepSizeY));//Draw start over from position
+		ctx.scale(xScale, -yScale);// Invert the image and plot the scale of the y-axis
+	 	ctx.beginPath();
+	 	ctx.fillStyle = "#00f";	
+	 	for (var i = 0; i < data.length; i++) {
+	 		ctx.fillRect(i, 0, 0.6, data[i]);
+	 	}
+	 	checkFirstDraw = false;
+	 }
+
+	 /**
+	 * Function draw Frame
+	 */
+	 privateFrame = function() {
+	 		ctx.beginPath();
+	 		var temp = 1;
+	 		ctx.fillStyle = "#000";
+	 		for (var scale = 0; scale <= valMax; scale += stepSizeY) {
+	 			var distance = (yScale * temp * stepSizeY);
+	 			var y = canva.height - distance; // The position y will draw next
+	 			ctx.fillText(scale, margin, y);
+	 			ctx.moveTo(columnRowSize, y);
+	 			ctx.lineTo(canva.width,y);
+	 			temp++;
+	 		}
+	 		for (var i = 0; i < data.length; i++) {
+	 			var x =  (i+0.7)* xScale;// The position x will draw next
+	 			ctx.fillText(nameColumn[i % nameColumn.length], x, canva.height - columnRowSize + margin);
+	 		}
+	 		ctx.strokeStyle = "#000";
+	 		ctx.stroke();
+	 }
+	 /**
+	  * Function draw description
+	  */
+	  privateDrawDescription = function() {
+	  		var colorIndex = 0;
+	  		var tempHTML = ""; // save String HTML to add file html
+	  		for(var temp in dataDescription) {
+	  			tempHTML += "<p><span style='display:inline-block; width:60px; height: 20px; magin-right:10px; background-color:blue'>&nbsp;</span>LEVEL OF POSITION</p>"; 
+	  		}
+	  		descript.innerHTML = tempHTML;
+	  }
+
+	 /* Public function */
+	 publicDrawChart = function() {
+	 	if (flag) {
+		 	privateFrame();
+	 		privateChartDataPlot();
+	 		privateDrawDescription();
+		} else {
+			alert("Input Fail");
+		}
+	 }
+
+	return {
+		draw: publicDrawChart
+	}
+})();
+
+$(document).ready(function() {
+	chart.draw();
+})
     
